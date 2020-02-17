@@ -43,8 +43,8 @@ with open(file_1_name, 'w', newline='') as file_1:
 
 		for x in range(0, fields_per_record):
 			field_name = 'field_' + str(x)
-			file_1_field_names.append(field_name)
-			file_2_field_names.append(field_name)
+			file_1_field_names.append('file_1_' + field_name)
+			file_2_field_names.append('file_2_' + field_name)
 
 		file_1_writer = csv.DictWriter(file_1, fieldnames=file_1_field_names)
 		file_2_writer = csv.DictWriter(file_2, fieldnames=file_2_field_names)
