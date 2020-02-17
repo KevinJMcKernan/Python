@@ -72,48 +72,4 @@ with open(file_1_name, 'w', newline='') as file_1:
 			file_1_writer.writerow(record1)
 
 
-# # create test files
-# with open(file_1_name, 'wb') as file_1:
-# 	with open(file_2_name, 'wb') as file_2:
-
-# 		# create headers.
-# 		field_l = lambda a, b : 'file_' + str(a) + '_field_' + str(b)
-# 		append_l = lambda input_str, new_str: str(input_str) + ',' + str(new_str)
-
-# 		file_1_header = ''
-# 		file_2_header = ''
-
-# 		for i in range(0, fields_per_record):
-# 			append_l(file_1_header, field_l(1,i))
-# 			append_l(file_2_header, field_l(2,i))
-
-
-# 		# write headers.
-# 		file_1.write(file_1_header)
-# 		file_2.write(file_2_header)
-
-# 		# loop and create test records.
-# 		for rec_idx in range(num_records):
-# 			file_1_record = ''
-# 			for file_1_field_idx in range(fields_per_record):
-# 				field_value = alpha_num_string_generator(len_each_field)
-# 				file_1_record += ',' + field_value
-
-# 				if(file_1_field_idx == 0): # if we have the first col, use the key to generate file 2 recs
-# 					file_2_record += ',' + field_value
-# 					for file_2_field_idx in range(fields_per_record):
-
-
-
-
-# 			client_file.write(str(client_key) + ', ' + alpha_num_string_generator() + '\n')
-
-# 			# write a random number of accounts to file.
-# 			for x in range(random.randint(1,9)):
-# 				account_key+=1
-# 				cli_acc_file.write(str(client_key) + ', ' + str(account_key) + '\n') 
-
 print('File generation complete. . . ')
-
-# Generation time for 1 million clients and 9 million accounts. = 10.7 seconds
-# Generation time for 10 million clients and 9 million accounts. = 109.5 seconds. (Linear time.)
